@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    
+<!---Main section with logo-->
+    <section class="dharani">
+        <header>
+            <div class="navbar">
+                <div class="logo"></div>
+                <a class="btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </a>
+                    <div class="menu show">
+                      <a href="#">Home</a>
+                      <a href="#d">About</a>
+                      <a href="#w">Workshops</a>
+                      <a href="#c">Contact</a>
+                    </div>
+            </div>
+        </header>
+        
+    <div class="im1"><img src="img_0.png"></div>
+    </section>
+
+
+
+    <!--Section with mobile-->
+    <section class="main">
+        <div class="dhar">
+            <h1>THE MObile</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+    <div class="center">
+        <div class="mobile">
+            <div class="screen">
+                <img src="img_0.png" class="dk">
+            <h2 class="dd"><span>Simba</span> Developers</h2>
+            </div>
+            <div class="home">
+            </div>
+            <div class="inner"></div>
+            <ul class="volume">
+                <li></li>
+                <li></li>
+            </ul>
+            <ul class="silent">
+                <li></li>
+            </ul>
+            <ul class="sleep">
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+
+      <script>
+          gsap.timeline({
+              scrollTrigger:{
+              trigger:".dharani",
+              start:"center center",
+              end:"center top",
+              markers:true,
+              scrub:true,
+              pin:true
+              }
+          })
+          .to(".im1",{scale:1.4,opacity:0})
+
+
+
+            gsap.timeline({
+        scrollTrigger:{
+            trigger:".main",
+            start:"center center",
+            end:"center top",
+            markers:true,
+            scrub:true,
+            pin:true
+        }
+        
+    }) 
+    .from(".center",{duration:30000,rotate:-90,x:-400})
+    
+       .from("p",{opacity:0,duration:30000})
+          .from(".dk",{y:7500,opacity:0.06,duration:30000})
+          .from(".dd",{y:600,opacity:0.03,duration:30000})
+          .to(".dk",{y:-800,opacity:0.06,duration:30000})
+          .to(".dd",{y:-175,opacity:1,duration:30000})
+          
+      </script>
+</body>
+</html>
